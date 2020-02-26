@@ -37,7 +37,8 @@ public class Nave : MonoBehaviour
                 timer = 0;
                 lifenow = lifenow - valuedano;
                 lifebar.transform.localScale = new Vector3((lifeporcent * lifenow), lifebar.transform.localScale.y, 0);
-                lifebar.GetComponent<lifebar>().active = true;                
+                lifebar.GetComponent<lifebar>().active = true;
+                lifebar.GetComponent<lifebar>().position = this.transform.position;
             }
             
         }

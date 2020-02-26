@@ -7,6 +7,7 @@ public class lifebar : MonoBehaviour
     public float timelife;
     public float timer;
     public bool active = true;
+    public Vector3 position;
     //public float life;
 
     // Start is called before the first frame update
@@ -26,9 +27,9 @@ public class lifebar : MonoBehaviour
             if (timer > timelife)
             {
                 timer = 0;
-                //active =false;
+                active =false;
                 this.GetComponent<SpriteRenderer>().enabled = active;
-                
+                this.transform.position = new Vector3(position.x, position.y + 0.109f, position.z);
             }
 
         }
